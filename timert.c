@@ -22,7 +22,8 @@ static void error(const char *s)
 	exit(1);
 }
 
-static void sigchld_handler(int signo, siginfo_t *si, void *uc)
+#define __unused __attribute__((__unused__))
+static void sigchld_handler(int signo __unused, siginfo_t *si, void *uc __unused)
 {
 //	fprintf(stderr, "code %d, status %d\n", si->si_code, si->si_status);
 	switch (si->si_code) {
