@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-unsigned int start_time;
+static unsigned int start_time;
 
 static void print_time(void)
 {
