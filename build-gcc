@@ -26,7 +26,7 @@ $ECHO -ne "       gcc:" && \
 	--disable-nls --disable-threads --disable-shared \
 	--disable-libmudflap --disable-libssp --disable-libgomp \
 	--disable-decimal-float --disable-libquadmath \
-	--enable-checking=$CHECKING \
+	--enable-checking=$CHECKING --disable-libatomic \
 	$EXTRA_GCC_CONF && \
 ../../timert build ../log-gcc-build make $MAKEOPTS && \
 ../../timert install ../log-gcc-install make install && \
