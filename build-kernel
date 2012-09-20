@@ -13,6 +13,10 @@ fatal() {
 	exit $1
 }
 
+if [ -z "$KERNEL_SRC" ]; then
+	$ECHO -ne "    kernel: skiped"
+	exit 0
+fi
 
 mkdir kernel 2>/dev/null
 ( \
