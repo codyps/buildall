@@ -3,39 +3,39 @@
 # Copyright (C) 2007-2009 Segher Boessenkool <segher@kernel.crashing.org>
 # Released under the terms of the GNU GPL, version 2
 
-BDIR=$( (cd `dirname $0` ; pwd))
-. $BDIR/config
+BDIR=$( (cd "`dirname $0`" ; pwd) )
+. "$BDIR"/config
 
 
-$ECHO "================== Primary platforms ========================="
-./build "$@" arm
-./build "$@" mips
-./build "$@" mips64 ip32_defconfig
-./build "$@" powerpc ppc6xx_defconfig
-./build "$@" powerpc64
-./build "$@" sparc
-./build "$@" sparc64
-./build "$@" i386
-./build "$@" x86_64
-$ECHO "================== Secondary platforms ======================="
-./build "$@" parisc
-./build "$@" parisc64 a500_defconfig
-./build "$@" ia64
-./build "$@" s390
-$ECHO "================== Tertiary platforms ========================"
-./build "$@" alpha
-./build "$@" avr32
-./build "$@" blackfin
-./build "$@" cris
-./build "$@" frv
-./build "$@" h8300
-./build "$@" m32r
-./build "$@" m68k
-./build "$@" m68knommu
-./build "$@" mn10300
-./build "$@" score
-./build "$@" sh
-./build "$@" sh64 cayman_defconfig
-./build "$@" xtensa
-$ECHO "================== Imaginary platforms ======================="
-./build "$@" microblaze
+"$ECHO" "================== Primary platforms ========================="
+"$BDIR"/build "$@" arm
+"$BDIR"/build "$@" mips
+"$BDIR"/build "$@" mips64 ip32_defconfig
+"$BDIR"/build "$@" powerpc ppc6xx_defconfig
+"$BDIR"/build "$@" powerpc64
+"$BDIR"/build "$@" sparc
+"$BDIR"/build "$@" sparc64
+"$BDIR"/build "$@" i386
+"$BDIR"/build "$@" x86_64
+"$ECHO" "================== Secondary platforms ======================="
+"$BDIR"/build "$@" parisc
+"$BDIR"/build "$@" parisc64 a500_defconfig
+"$BDIR"/build "$@" ia64
+"$BDIR"/build "$@" s390
+"$ECHO" "================== Tertiary platforms ========================"
+"$BDIR"/build "$@" alpha
+"$BDIR"/build "$@" avr32
+"$BDIR"/build "$@" blackfin
+"$BDIR"/build "$@" cris
+"$BDIR"/build "$@" frv
+"$BDIR"/build "$@" h8300
+"$BDIR"/build "$@" m32r
+"$BDIR"/build "$@" m68k
+"$BDIR"/build "$@" m68knommu
+"$BDIR"/build "$@" mn10300
+"$BDIR"/build "$@" score
+"$BDIR"/build "$@" sh
+"$BDIR"/build "$@" sh64 cayman_defconfig
+"$BDIR"/build "$@" xtensa
+"$ECHO" "================== Imaginary platforms ======================="
+"$BDIR"/build "$@" microblaze
