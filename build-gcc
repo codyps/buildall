@@ -18,7 +18,7 @@ mkdir gcc 2>/dev/null
 ( \
 cd gcc && \
 $ECHO -ne "       gcc:" && \
-../../timert configure ../log-gcc-configure \
+"$BDIR"/timert configure ../log-gcc-configure \
 	$GCC_SRC/configure \
 	--target=$TARGET --enable-targets=all --prefix=$PREFIX \
 	--enable-languages=c --without-headers \
@@ -28,7 +28,7 @@ $ECHO -ne "       gcc:" && \
 	--disable-decimal-float --disable-libquadmath \
 	--enable-checking=$CHECKING --disable-libatomic \
 	$EXTRA_GCC_CONF && \
-../../timert build ../log-gcc-build make $MAKEOPTS && \
-../../timert install ../log-gcc-install make install && \
+"$BDIR"/timert build ../log-gcc-build make $MAKEOPTS && \
+"$BDIR"/timert install ../log-gcc-install make install && \
 $ECHO \
 ) || fatal 102
