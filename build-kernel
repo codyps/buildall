@@ -22,10 +22,10 @@ mkdir kernel 2>/dev/null
 ( \
 cd kernel && \
 $ECHO -ne "    kernel:" && \
-../../timert configure ../log-kernel-configure \
+"$BDIR/timert" configure ../log-kernel-configure \
 	make ARCH=$ARCH CROSS_COMPILE=$TARGET- \
 	-C $KERNEL_SRC O=$PWD $DEFCONFIG && \
-../../timert build ../log-kernel-build \
+"$BDIR/timert" build ../log-kernel-build \
 	make ARCH=$ARCH CROSS_COMPILE=$TARGET- $MAKEOPTS && \
 	$ECHO -n "  " && \
 	$ECHO -n $(grep -ci "warning:" ../log-kernel-build) && \

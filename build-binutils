@@ -18,11 +18,11 @@ mkdir binutils 2>/dev/null
 ( \
 cd binutils && \
 $ECHO -ne "  binutils:" && \
-$BDIR/timert configure ../log-binutils-configure \
+"$BDIR/timert" configure ../log-binutils-configure \
 	$BINUTILS_SRC/configure --target=$TARGET --prefix=$PREFIX \
 	--enable-64-bit-bfd --disable-nls --disable-werror \
 	$EXTRA_BINUTILS_CONF && \
-$BDIR/timert build ../log-binutils-build make $MAKEOPTS && \
-$BDIR/timert install ../log-binutils-install make install && \
+"$BDIR/timert" build ../log-binutils-build make $MAKEOPTS && \
+"$BDIR/timert" install ../log-binutils-install make install && \
 $ECHO \
 ) || fatal 101
