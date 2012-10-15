@@ -37,7 +37,7 @@ case $ARCH in
 	*-elf)		TARGET=$ARCH ;;
 
 	# arm-linux == arm-unknown-linux-gnu is unsupported.
-	arm)		TARGET=arm-linux-gnueabihf ;;
+	arm)		TARGET=arm-linux-eabihf ;;
 	avr32)		TARGET=avr-linux ;;
 	blackfin)	TARGET=bfin-uclinux ;;
 	h8300)		TARGET=h8300-elf ;;
